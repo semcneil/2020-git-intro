@@ -23,6 +23,10 @@ import doctest   # used for testing the code from docstring examples
 
 
 # Functions
+def add_something(num1, num2):
+    """This function adds two numbers and returns the result
+    """
+    return(num1 + num2)
 
 
 # This runs if the file is run as a script vs included as a module
@@ -38,6 +42,8 @@ if __name__ == '__main__':
         doctest.testmod(verbose=True)  # run the tests in verbose mode
 
     print("-------------------")
+    added = add_something(4, 5)
+    print(f'Adding 4 + 5 = {added}')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')

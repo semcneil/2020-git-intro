@@ -25,6 +25,14 @@ import doctest   # used for testing the code from docstring examples
 # Functions
 def add_something(num1, num2):
     """This function adds two numbers and returns the result
+
+        >>> add_something(2,3)
+        5
+        >>> add_something(-4, 4)
+        0
+        >>> add_something(-3, -5)
+        -8
+
     """
     return(num1 + num2)
 

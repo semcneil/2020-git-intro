@@ -5,7 +5,7 @@
 # This is a file to demonstrate open source software collaboration for the
 # 2020 CPTR 226 class.
 #
-# Author: Seth McNeill
+# Author: Jared Schiavone
 # Date: 2020 September 07
 # Version: 0.1
 # Course: CPTR 226
@@ -23,18 +23,18 @@ import doctest   # used for testing the code from docstring examples
 
 
 # Functions
-def add_something(num1, num2):
-    """This function adds two numbers and returns the result
+def not_equal(num1, num2):
+    """This function determines if two numbers are equal
 
-        >>> add_something(2,3)
-        5
-        >>> add_something(-4, 4)
-        0
-        >>> add_something(-3, -5)
-        -8
+        >>> not_equal(2,3)
+        True
+        >>> not_equal(4, 4)
+        False
+        >>> not_equal(-3, -5)
+        True
 
     """
-    return(num1 + num2)
+    return(num1 != num2)
 
 
 # This runs if the file is run as a script vs included as a module
@@ -50,8 +50,8 @@ if __name__ == '__main__':
         doctest.testmod(verbose=True)  # run the tests in verbose mode
 
     print("-------------------")
-    added = add_something(4, 5)
-    print(f'Adding 4 + 5 = {added}')
+    added = not_equal(4, 5)
+    print(f'4 != 5 = {added}')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')

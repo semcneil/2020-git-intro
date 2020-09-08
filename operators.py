@@ -37,6 +37,21 @@ def greater_than_something(num1, num2):
     return(num1 > num2)
 
 
+def is_equal(a, b):
+    """This function checks if the two variables are equal to each other.
+
+        >>> is_equal(2, 2)
+        True
+        >>> is_equal(2, 3)
+        False
+        >>> is_equal("Dog", "Dog")
+        True
+        >>> is_equal("Cat", "Dog")
+        False
+    """
+    return(a == b)
+
+
 def sequence(find, numbers):
     """This function checks to see if an object is in a sequence
 
@@ -52,6 +67,7 @@ def sequence(find, numbers):
             return(n)
     else:
         return("Nothing")
+
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -69,10 +85,11 @@ if __name__ == '__main__':
     added = greater_than_something(4, 5)
     print(f'4 is greater than 5 = {added}')
 
-    sequenced = sequence(6,[1,2,3,4,5,6])
-    print(f'{sequenced} is in the sequence')
+    equal = is_equal(5, 5)
+    print(f'Is 5 equal to 5? {equal}')
 
+    sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
+    print(f'{sequenced} is in the sequence')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')
-

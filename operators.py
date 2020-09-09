@@ -25,6 +25,18 @@ import doctest   # used for testing the code from docstring examples
 
 
 # Functions
+def multiply_something(num1, num2):
+    """this function will multiply num1 and num2
+
+        >>> multiply_something(2, 6)
+        12
+        >>> multiply_something(-2, 6)
+        -12
+        
+    """
+    return(num1 * num2)
+
+
 def minus_something(num1, num2):
     """This function substracts two numbers and returns the result
         
@@ -93,6 +105,7 @@ def sequence(find, numbers):
         return("Nothing")
 
 
+
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -106,6 +119,10 @@ if __name__ == '__main__':
         doctest.testmod(verbose=True)  # run the tests in verbose mode
 
     print("-------------------")
+    print()
+    multiplied = multiply_something(2, 6)
+    print(f'multiply 2 x 6 = {multiplied}')
+
     subtracted = minus_something(8, 5)
     print(f'Subtracting 8 - 5 = {subtracted}')
 

@@ -7,6 +7,8 @@
 #
 # Author: Jared Schiavone
 # Date: 2020 September 07
+# Author: Kristin Sydow
+# Date: 2020 September 8
 # Version: 0.1
 # Course: CPTR 226
 """This is a file to demonstrate open source software collaboration for the
@@ -36,6 +38,34 @@ def not_equal(num1, num2):
     """
     return(num1 != num2)
 
+def greater_than_something(num1, num2):
+    """This function checks if the first number is greater than the second.
+
+        >>> greater_than_something(2,3)
+        False
+        >>> greater_than_something(-4, 4)
+        False
+        >>> greater_than_something(-3, -5)
+        True
+
+    """
+    return(num1 > num2)
+
+def sequence(find, numbers):
+    """This function checks to see if an object is in a sequence
+
+        >>> sequence(1, [1,2,3,4])
+        1
+        >>> sequence("i", "Hello world")
+        'Nothing'
+        >>> sequence(4, (2,4,6))
+        4
+    """
+    for n in numbers:
+        if find == n:
+            return(n)
+    else:
+        return("Nothing")
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -50,8 +80,15 @@ if __name__ == '__main__':
         doctest.testmod(verbose=True)  # run the tests in verbose mode
 
     print("-------------------")
+
     added = not_equal(4, 5)
     print(f'4 != 5 = {added}')
+    
+    added = greater_than_something(4, 5)
+    print(f'4 is greater than 5 = {added}')
+
+    sequenced = sequence(6,[1,2,3,4,5,6])
+    print(f'{sequenced} is in the sequence')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')

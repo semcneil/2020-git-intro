@@ -25,6 +25,15 @@ import doctest   # used for testing the code from docstring examples
 
 
 # Functions
+def minus_something(num1, num2):
+    """This function substracts two numbers and returns the result
+        
+        >>> minus_something(8, 5)
+        3
+    """
+    return(num1 - num2)
+
+  
 def not_equal(num1, num2):
     """This function determines if two numbers are equal
 
@@ -34,9 +43,9 @@ def not_equal(num1, num2):
         False
         >>> not_equal(-3, -5)
         True
-
     """
     return(num1 != num2)
+  
 
 def greater_than_something(num1, num2):
     """This function checks if the first number is greater than the second.
@@ -50,6 +59,7 @@ def greater_than_something(num1, num2):
 
     """
     return(num1 > num2)
+  
 
 def is_equal(a, b):
     """This function checks if the two variables are equal to each other.
@@ -96,12 +106,14 @@ if __name__ == '__main__':
         doctest.testmod(verbose=True)  # run the tests in verbose mode
 
     print("-------------------")
+    subtracted = minus_something(8, 5)
+    print(f'Subtracting 8 - 5 = {subtracted}')
 
     added = not_equal(4, 5)
     print(f'4 != 5 = {added}')
     
-    added = greater_than_something(4, 5)
-    print(f'4 is greater than 5 = {added}')
+    gt = greater_than_something(4, 5)
+    print(f'4 is greater than 5 = {gt}')
 
     equal = is_equal(5, 5)
     print(f'Is 5 equal to 5? {equal}')

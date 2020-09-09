@@ -5,8 +5,10 @@
 # This is a file to demonstrate open source software collaboration for the
 # 2020 CPTR 226 class.
 #
-# Author: Seth McNeill
+# Author: Jared Schiavone
 # Date: 2020 September 07
+# Author: Kristin Sydow
+# Date: 2020 September 8
 # Version: 0.1
 # Course: CPTR 226
 """This is a file to demonstrate open source software collaboration for the
@@ -25,13 +27,70 @@ import doctest   # used for testing the code from docstring examples
 # Functions
 def minus_something(num1, num2):
     """This function substracts two numbers and returns the result
-
+        
         >>> minus_something(8, 5)
         3
     """
-
     return(num1 - num2)
 
+  
+def not_equal(num1, num2):
+    """This function determines if two numbers are equal
+
+        >>> not_equal(2,3)
+        True
+        >>> not_equal(4, 4)
+        False
+        >>> not_equal(-3, -5)
+        True
+    """
+    return(num1 != num2)
+  
+
+def greater_than_something(num1, num2):
+    """This function checks if the first number is greater than the second.
+
+        >>> greater_than_something(2,3)
+        False
+        >>> greater_than_something(-4, 4)
+        False
+        >>> greater_than_something(-3, -5)
+        True
+
+    """
+    return(num1 > num2)
+  
+
+def is_equal(a, b):
+    """This function checks if the two variables are equal to each other.
+
+        >>> is_equal(2, 2)
+        True
+        >>> is_equal(2, 3)
+        False
+        >>> is_equal("Dog", "Dog")
+        True
+        >>> is_equal("Cat", "Dog")
+        False
+    """
+    return(a == b)
+
+
+def sequence(find, numbers):
+    """This function checks to see if an object is in a sequence
+
+        >>> sequence(1, [1,2,3,4])
+        1
+        >>> sequence("i", "Hello world")
+        'Nothing'
+        >>> sequence(4, (2,4,6))
+        4
+    """
+    for n in numbers:
+        if find == n:
+            return(n)
+    else:
+        return("Nothing")
 
 
 # This runs if the file is run as a script vs included as a module
@@ -47,9 +106,20 @@ if __name__ == '__main__':
         doctest.testmod(verbose=True)  # run the tests in verbose mode
 
     print("-------------------")
-    added = minus_something(8, 5)
-    print(f'Subtracting 8 - 5 = {added}')
+    subtracted = minus_something(8, 5)
+    print(f'Subtracting 8 - 5 = {subtracted}')
+
+    added = not_equal(4, 5)
+    print(f'4 != 5 = {added}')
+    
+    gt = greater_than_something(4, 5)
+    print(f'4 is greater than 5 = {gt}')
+
+    equal = is_equal(5, 5)
+    print(f'Is 5 equal to 5? {equal}')
+
+    sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
+    print(f'{sequenced} is in the sequence')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')
-

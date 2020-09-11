@@ -114,6 +114,13 @@ def floor_divide(num1, num2):
     return(num1//num2)
 
 
+def modulus(a, b):
+    """This function finds the remainder from a division
+
+        >>> modulus(7, 2)
+        1 
+    """
+    return(a % b)
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -146,6 +153,9 @@ if __name__ == '__main__':
 
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
+
+    modulus = modulus(10, 4)
+    print(f'The remainder is {modulus}')
 
     floor_divided = floor_divide(7,6) 
     print(f'{floor_divided} was returned by floor divide')

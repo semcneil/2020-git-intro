@@ -9,6 +9,8 @@
 # Date: 2020 September 07
 # Author: Kristin Sydow
 # Date: 2020 September 8
+# Author: Diana Celaya 
+# Date: 2020 September 10
 # Version: 0.1
 # Course: CPTR 226
 """This is a file to demonstrate open source software collaboration for the
@@ -104,6 +106,13 @@ def sequence(find, numbers):
     else:
         return("Nothing")
 
+def floor_divide(num1, num2):
+    """ This function returns the integral part of the quotient 
+        >>> floor_divide(5, 3)
+        2
+    """
+    return(num1//num2)
+
 
 
 # This runs if the file is run as a script vs included as a module
@@ -137,6 +146,9 @@ if __name__ == '__main__':
 
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
+
+    floor_divided = floor_divide(7,6) 
+    print(f'{floor_divided} was returned by floor divide')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')

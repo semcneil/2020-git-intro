@@ -9,6 +9,8 @@
 # Date: 2020 September 07
 # Author: Kristin Sydow
 # Date: 2020 September 8
+# Author: Diana Celaya 
+# Date: 2020 September 10
 # Version: 0.1
 # Course: CPTR 226
 """This is a file to demonstrate open source software collaboration for the
@@ -104,6 +106,7 @@ def sequence(find, numbers):
     else:
         return("Nothing")
 
+<<<<<<< HEAD
 def exponet(num1, num2):
     """"This function exponentiates 2 numbers
     
@@ -113,6 +116,34 @@ def exponet(num1, num2):
         0.25
     """
     return(num1**num2)
+=======
+def less_than_something(num1, num2):
+    """This function checks if the first number is less than the second.
+
+        >>> less_than_something(5,9)
+        True
+        >>> less_than_something(2, 4)
+        True
+        >>> less_than_something(-8, -4)
+        False
+    """
+    
+def floor_divide(num1, num2):
+    """ This function returns the integral part of the quotient 
+        >>> floor_divide(5, 3)
+        2
+    """
+    return(num1//num2)
+
+>>>>>>> e0f1b3028fc9637889fd977f762c2b53a48a5d7a
+
+def modulus(a, b):
+    """This function finds the remainder from a division
+
+        >>> modulus(7, 2)
+        1 
+    """
+    return(a % b)
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -146,8 +177,19 @@ if __name__ == '__main__':
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
 
+<<<<<<< HEAD
     exponentiated = exponet(2, 2)
     print(f'2**2 = {exponentiated}')
+=======
+    lt = less_than_something(1, 6)
+    print(f'1 is less than 6 = {lt}')
+
+    modulus = modulus(10, 4)
+    print(f'The remainder is {modulus}')
+
+    floor_divided = floor_divide(7,6) 
+    print(f'{floor_divided} was returned by floor divide')
+>>>>>>> e0f1b3028fc9637889fd977f762c2b53a48a5d7a
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')

@@ -106,6 +106,16 @@ def sequence(find, numbers):
     else:
         return("Nothing")
 
+def exponet(num1, num2):
+    """"This function exponentiates 2 numbers
+    
+        >>> exponet(2, 2)
+        4
+        >>> exponet(2, -2)
+        0.25
+    """
+    return(num1**num2)
+
 def less_than_something(num1, num2):
     """This function checks if the first number is less than the second.
 
@@ -124,6 +134,12 @@ def floor_divide(num1, num2):
     """
     return(num1//num2)
 
+def modulus(a, b):
+    """This function finds the remainder from a division
+        >>> modulus(7, 2)
+        1 
+    """
+    return(a % b)
 
 def modulus(a, b):
     """This function finds the remainder from a division
@@ -164,6 +180,9 @@ if __name__ == '__main__':
 
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
+
+    exponentiated = exponet(2, 2)
+    print(f'2**2 = {exponentiated}')
 
     lt = less_than_something(1, 6)
     print(f'1 is less than 6 = {lt}')

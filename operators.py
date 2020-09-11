@@ -105,6 +105,13 @@ def sequence(find, numbers):
         return("Nothing")
 
 
+def modulus(a, b):
+    """This function finds the remainder from a division
+
+        >>> modulus(7, 2)
+        1 
+    """
+    return(a % b)
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -137,6 +144,9 @@ if __name__ == '__main__':
 
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
+
+    modulus = modulus(10, 4)
+    print(f'The remainder is {modulus}')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')

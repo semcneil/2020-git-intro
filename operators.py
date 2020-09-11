@@ -106,6 +106,17 @@ def sequence(find, numbers):
     else:
         return("Nothing")
 
+def less_than_something(num1, num2):
+    """This function checks if the first number is less than the second.
+
+        >>> less_than_something(5,9)
+        True
+        >>> less_than_something(2, 4)
+        True
+        >>> less_than_something(-8, -4)
+        False
+    """
+    
 def floor_divide(num1, num2):
     """ This function returns the integral part of the quotient 
         >>> floor_divide(5, 3)
@@ -153,6 +164,9 @@ if __name__ == '__main__':
 
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
+
+    lt = less_than_something(1, 6)
+    print(f'1 is less than 6 = {lt}')
 
     modulus = modulus(10, 4)
     print(f'The remainder is {modulus}')

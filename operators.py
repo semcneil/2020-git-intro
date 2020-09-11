@@ -106,7 +106,6 @@ def sequence(find, numbers):
     else:
         return("Nothing")
 
-<<<<<<< HEAD
 def exponet(num1, num2):
     """"This function exponentiates 2 numbers
     
@@ -116,7 +115,7 @@ def exponet(num1, num2):
         0.25
     """
     return(num1**num2)
-=======
+
 def less_than_something(num1, num2):
     """This function checks if the first number is less than the second.
 
@@ -135,7 +134,12 @@ def floor_divide(num1, num2):
     """
     return(num1//num2)
 
->>>>>>> e0f1b3028fc9637889fd977f762c2b53a48a5d7a
+def modulus(a, b):
+    """This function finds the remainder from a division
+        >>> modulus(7, 2)
+        1 
+    """
+    return(a % b)
 
 def modulus(a, b):
     """This function finds the remainder from a division
@@ -177,10 +181,9 @@ if __name__ == '__main__':
     sequenced = sequence(6, [1, 2, 3, 4, 5, 6])
     print(f'{sequenced} is in the sequence')
 
-<<<<<<< HEAD
     exponentiated = exponet(2, 2)
     print(f'2**2 = {exponentiated}')
-=======
+
     lt = less_than_something(1, 6)
     print(f'1 is less than 6 = {lt}')
 
@@ -189,7 +192,6 @@ if __name__ == '__main__':
 
     floor_divided = floor_divide(7,6) 
     print(f'{floor_divided} was returned by floor divide')
->>>>>>> e0f1b3028fc9637889fd977f762c2b53a48a5d7a
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')

@@ -9,6 +9,8 @@
 # Date: 2020 September 07
 # Author: Kristin Sydow
 # Date: 2020 September 8
+# Author: Diana Celaya 
+# Date: 2020 September 10
 # Version: 0.1
 # Course: CPTR 226
 """This is a file to demonstrate open source software collaboration for the
@@ -113,10 +115,23 @@ def less_than_something(num1, num2):
         True
         >>> less_than_something(-8, -4)
         False
-
     """
+    
+def floor_divide(num1, num2):
+    """ This function returns the integral part of the quotient 
+        >>> floor_divide(5, 3)
+        2
+    """
+    return(num1//num2)
 
 
+def modulus(a, b):
+    """This function finds the remainder from a division
+
+        >>> modulus(7, 2)
+        1 
+    """
+    return(a % b)
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -152,6 +167,12 @@ if __name__ == '__main__':
 
     lt = less_than_something(1, 6)
     print(f'1 is less than 6 = {lt}')
+
+    modulus = modulus(10, 4)
+    print(f'The remainder is {modulus}')
+
+    floor_divided = floor_divide(7,6) 
+    print(f'{floor_divided} was returned by floor divide')
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')
